@@ -1,0 +1,44 @@
+Muhammad Ibrahim
+Full Stack Developer | Software Engineer | Generative AI & LLM Integration
+0330-2826165 | ibrahim.engdev@gmail.com
+Portfolio | GitHub | LinkedIn
+PROFESSIONAL
+SUMMARY
+I am a Software Engineering student and full-stack developer. I enjoy backend work, such
+as building APIs, login systems and user roles. I have also built my own projects, including
+a multi-tenant school management platform. I am now learning Generative AI and Agentic
+AI.
+WORK HISTORY MERN STACK DEVELOPER Nov 2025 – May 2026
+Technet Cloud | Karachi, Pakistan
+• Built 20+ responsive storefront themes for sellkar.pk that users can preview and deploy.
+• Built mobile features for the Sellkar platform in React Native (Expo).
+• Built mirageworks.co, a 25+ page business website.
+PROJECTS ClassPilot — School Management Platform
+• Built a multi-role backend (Admin, Teacher, Parent) with JWT auth and bcrypt hashing.
+• Designed multi-tenant architecture with RBAC, keeping each school's data separate.
+Tech Stack: React, Redux Toolkit, Node.js, Express, MongoDB, JWT
+AI Multilingual Messenger
+• Building a Flutter chat app that helps people talk across languages, with Supabase for
+backend and data.
+• Designing an AI translation workflow for simple, accessible messaging.
+Tech Stack: Flutter, Dart, Supabase, AI/LLM Integration
+AI Questions & Answers Generator
+• Built an app that reads uploaded PDFs and uses an LLM to generate questions and
+answers.
+• Created FastAPI endpoints for file upload and content generation, with a simple web
+interface.
+Tech Stack: Python, FastAPI, LangChain, Groq LLM API, PDF Processing
+SKILLS Languages: JavaScript, TypeScript, Python, SQL
+Frontend Development: React.js, Next.js, HTML5, CSS3, Tailwind CSS
+Backend Development: Node.js, Express.js, FastAPI, REST APIs.
+Generative AI & LLMs: Retrieval-Augmented Generation (RAG), LLM Integration, Prompt
+Engineering, LangChain, Embeddings, Semantic Search
+Vector Search & Databases: ChromaDB, FAISS, MongoDB, PostgreSQL, MySQL
+Mobile Development: Flutter, Dart, React Native (Expo)
+Tools : Git, GitHub, Claude, Copilot.
+EDUCATION BS, Software Engineering (BSSE) 2024 – 2028
+Sindh Madressatul Islam University (SMIU)
+Modern Web and App Development Course 2024 – 2025
+Saylani Mass IT Program (SMIT)
+Generative AI Course 2026
+freeCodeCamp.org
