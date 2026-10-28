@@ -1,0 +1,91 @@
+{
+  "name": "Muhammad Ibrahim",
+  "headline": "Full Stack Developer | Software Engineer | Generative AI & LLM Integration",
+  "summary": "I am a Software Engineering student and full-stack developer. I enjoy backend work, such as building APIs, login systems and user roles. I have also built my own projects, including a multi-tenant school management platform. I am now learning Generative AI and Agentic AI.",
+  "skills": [
+    "JavaScript",
+    "TypeScript",
+    "Python",
+    "SQL",
+    "React.js",
+    "Next.js",
+    "HTML5",
+    "CSS3",
+    "Tailwind CSS",
+    "Node.js",
+    "Express.js",
+    "FastAPI",
+    "REST APIs",
+    "Retrieval-Augmented Generation (RAG)",
+    "LLM Integration",
+    "Prompt Engineering",
+    "LangChain",
+    "Embeddings",
+    "Semantic Search",
+    "ChromaDB",
+    "FAISS",
+    "MongoDB",
+    "PostgreSQL",
+    "MySQL",
+    "Flutter",
+    "Dart",
+    "React Native (Expo)",
+    "Git",
+    "GitHub",
+    "Claude",
+    "Copilot"
+  ],
+  "experience": [
+    {
+      "title": "MERN STACK DEVELOPER",
+      "company": "Technet Cloud",
+      "dates": "Nov 2025 – May 2026",
+      "bullets": [
+        "Built 20+ responsive storefront themes for sellkar.pk that users can preview and deploy.",
+        "Built mobile features for the Sellkar platform in React Native (Expo).",
+        "Built mirageworks.co, a 25+ page business website."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "ClassPilot — School Management Platform",
+      "description": "Built a multi-role backend (Admin, Teacher, Parent) with JWT auth and bcrypt hashing. Designed multi-tenant architecture with RBAC, keeping each school's data separate.",
+      "tech": [
+        "React",
+        "Redux Toolkit",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "JWT"
+      ]
+    },
+    {
+      "name": "AI Multilingual Messenger",
+      "description": "Building a Flutter chat app that helps people talk across languages, with Supabase for backend and data. Designing an AI translation workflow for simple, accessible messaging.",
+      "tech": [
+        "Flutter",
+        "Dart",
+        "Supabase",
+        "AI/LLM Integration"
+      ]
+    },
+    {
+      "name": "AI Questions & Answers Generator",
+      "description": "Built an app that reads uploaded PDFs and uses an LLM to generate questions and answers. Created FastAPI endpoints for file upload and content generation, with a simple web interface.",
+      "tech": [
+        "Python",
+        "FastAPI",
+        "LangChain",
+        "Groq LLM API",
+        "PDF Processing"
+      ]
+    }
+  ],
+  "education": [
+    "BS, Software Engineering (BSSE) 2024 – 2028 – Sindh Madressatul Islam University (SMIU)",
+    "Modern Web and App Development Course 2024 – 2025 – Saylani Mass IT Program (SMIT)",
+    "Generative AI Course 2026",
+    "freeCodeCamp.org"
+  ]
+}
