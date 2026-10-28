@@ -28,6 +28,7 @@ def ask_json(system, user):
             {"role": "user", "content": user},
         ],
         response_format={"type": "json_object"},
+        temperature=0
     )
     text = response.choices[0].message.content
     return json.loads(text)

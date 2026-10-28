@@ -1,0 +1,23 @@
+Job Title: QA Automation Engineer
+Work Location: Hybrid
+
+Job Summary:
+We are seeking a QA engineer to test web applications and automate repetitive test cases.
+
+Responsibilities:
+- Create test plans and test cases from requirements.
+- Perform functional, regression, and exploratory testing.
+- Write automated tests using Playwright or Selenium.
+- Report bugs with clear reproduction steps and evidence.
+- Test REST APIs and verify responses.
+- Work with developers to confirm fixes.
+
+Requirements:
+- Understanding of software testing fundamentals.
+- Attention to detail and structured problem-solving.
+- Ability to write clear bug reports.
+- Basic programming or scripting knowledge.
+- Familiarity with browser developer tools and API testing.
+
+Preferred:
+- JavaScript or Python, CI pipelines, and experience with test automation frameworks.

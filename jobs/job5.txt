@@ -1,0 +1,23 @@
+Job Title: React / Next.js Frontend Developer
+Work Location: Hybrid
+
+Job Summary:
+We need a frontend developer to build accessible, responsive web interfaces for a SaaS platform.
+
+Responsibilities:
+- Implement reusable React components and pages in Next.js.
+- Translate designs into responsive layouts with HTML and CSS.
+- Connect frontend screens to REST APIs.
+- Manage loading, error, and form states.
+- Improve performance and troubleshoot browser issues.
+- Use Git branches and participate in code reviews.
+
+Requirements:
+- Strong JavaScript, HTML, CSS, and React fundamentals.
+- Experience building responsive interfaces.
+- Familiarity with Next.js and REST API integration.
+- Basic knowledge of accessibility and browser debugging.
+- Good communication and teamwork.
+
+Preferred:
+- TypeScript, component testing, and UI libraries.
