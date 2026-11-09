@@ -22,6 +22,7 @@
     "LangChain",
     "Embeddings",
     "Semantic Search",
+    "Vector Search",
     "ChromaDB",
     "FAISS",
     "MongoDB",
@@ -50,7 +51,7 @@
   "projects": [
     {
       "name": "ClassPilot — School Management Platform",
-      "description": "Built a multi-role backend (Admin, Teacher, Parent) with JWT auth and bcrypt hashing. Designed multi-tenant architecture with RBAC, keeping each school's data separate.",
+      "description": "Built a multi-role backend (Admin, Teacher, Parent) with JWT auth and bcrypt hashing. Designed multi-tenant architecture with RBAC, keeping each school’s data separate.",
       "tech": [
         "React",
         "Redux Toolkit",
@@ -83,8 +84,8 @@
     }
   ],
   "education": [
-    "BS, Software Engineering (BSSE) 2024 – 2028 – Sindh Madressatul Islam University (SMIU)",
-    "Modern Web and App Development Course 2024 – 2025 – Saylani Mass IT Program (SMIT)",
-    "Generative AI Course 2026 – freeCodeCamp.org"
+    "BS, Software Engineering (BSSE) 2024 – 2028 Sindh Madressatul Islam University (SMIU)",
+    "Modern Web and App Development Course 2024 – 2025 Saylani Mass IT Program (SMIT)",
+    "Generative AI Course 2026 freeCodeCamp.org"
   ]
 }

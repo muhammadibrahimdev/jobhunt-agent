@@ -1,0 +1,9 @@
+Hiring Team,
+
+I built ClassPilot, a multi‑tenant school management platform with secure JWT authentication and role‑based access, and AI Multilingual Messenger, a Flutter chat app that bridges language barriers using LLMs. Both projects required designing user‑centric interfaces, managing data integrity, and integrating third‑party services—skills that translate to understanding client needs and delivering tailored solutions.
+
+In my role as MERN Stack Developer at Technet Cloud, I delivered 20+ responsive storefront themes and mobile features for Sellkar.pk, collaborating closely with stakeholders to meet functional requirements and launch on schedule. These experiences sharpened my ability to translate technical specifications into business value, a key component of any sales process.
+
+I am eager to apply my technical insight and client‑focused development experience to help your team identify and secure new business opportunities. Thank you for considering my application.
+
+Muhammad Ibrahim
