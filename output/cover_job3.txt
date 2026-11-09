@@ -1,0 +1,9 @@
+Hiring Team,
+
+I built ClassPilot, a multi‑tenant school management platform, where I designed a secure JWT‑based backend with role‑based access and a responsive React UI. I also developed the AI Questions & Answers Generator, creating FastAPI endpoints that process PDFs and generate content via LangChain and a Groq LLM API.
+
+Both projects required building REST APIs with Node.js/Express and React, managing data in MongoDB and PostgreSQL, and integrating authentication and third‑party services. I used GitHub for version control, wrote clean, testable code, and delivered responsive interfaces that work across devices.
+
+I am ready to bring this experience to your team, building responsive React/Next.js UIs, crafting robust Node/Express APIs, and working with PostgreSQL. I look forward to contributing to your projects.
+
+Muhammad Ibrahim
