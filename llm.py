@@ -2,6 +2,7 @@ from groq import Groq
 import os
 from dotenv import load_dotenv
 import json
+import time
 
 load_dotenv()
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
@@ -20,15 +21,26 @@ def ask(user, system):
 
 
 
-def ask_json(system, user):
-    response = client.chat.completions.create(
-        model=model,
-        messages=[
-            {"role": "system", "content": system},
-            {"role": "user", "content": user},
-        ],
-        response_format={"type": "json_object"},
-        temperature=0
-    )
-    text = response.choices[0].message.content
-    return json.loads(text)
+
+
+def ask_json(system, user, model=model, retries=3):
+    last_error = None
+    for attempt in range(retries):
+        try:
+            response = client.chat.completions.create(
+                model=model,
+                messages=[
+                    {"role": "system", "content": system},
+                    {"role": "user", "content": user},
+                ],
+                response_format={"type": "json_object"},
+                temperature=0,
+                max_completion_tokens=4096,
+                reasoning_effort="low",
+            )
+            return json.loads(response.choices[0].message.content)
+        except Exception as e:
+            last_error = e
+            print(f"Attempt {attempt + 1} failed, retrying...")
+            time.sleep(2)
+    raise last_error
