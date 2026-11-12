@@ -1,9 +1,9 @@
 Hiring Team,
 
-I am a Software Engineering student and full‑stack developer with experience building backend systems such as APIs, login systems, and user roles. I built ClassPilot, a multi‑tenant school management platform, implementing a secure JWT‑based backend with role‑based access and a responsive React UI. I also developed the AI Questions & Answers Generator, creating FastAPI endpoints that process PDFs and generate content via LangChain and a Groq LLM API.
+I am a full‑stack developer studying Software Engineering at Sindh Madressatul Islam University. I built ClassPilot, a multi‑tenant school management platform, with a secure JWT‑based backend, role‑based access, and bcrypt password hashing. I also developed an AI Questions & Answers Generator, creating FastAPI endpoints that process PDFs and generate content using LangChain.
 
-My technical stack includes JavaScript, TypeScript, Python, SQL, React.js, Next.js, Node.js, Express.js, FastAPI, REST APIs, MongoDB, PostgreSQL, MySQL, and various AI tools such as Retrieval‑Augmented Generation, LLM Integration, Prompt Engineering, LangChain, and embeddings. I have worked on projects using Flutter, Dart, and React Native (Expo), and I am proficient with Git and GitHub.
+My work has involved React, Redux Toolkit, Node.js, Express, MongoDB, JWT, FastAPI, and REST APIs. I maintain version control with Git and apply best practices in authentication and secure password handling.
 
-I am eager to contribute my backend focus and full‑stack experience to your team, building robust, scalable web applications.
+I am eager to bring my backend and full‑stack experience to your team, delivering clean, maintainable code and collaborating closely with designers and developers to build robust web applications.
 
 Muhammad Ibrahim
