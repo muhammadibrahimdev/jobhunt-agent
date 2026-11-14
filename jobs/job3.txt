@@ -1,0 +1,24 @@
+Job Title: Junior Full Stack Developer (React / Next.js)
+Work Location: Remote
+
+Job Summary:
+We are seeking a junior full-stack developer to build and maintain web applications using React, Next.js, Node.js, and PostgreSQL.
+
+Responsibilities:
+- Build responsive user interfaces with React and Next.js.
+- Develop REST APIs using Node.js and Express.
+- Integrate third-party APIs and authentication.
+- Work with PostgreSQL databases and write queries.
+- Debug issues, review code, and contribute through Git.
+- Collaborate with designers and other developers.
+
+Requirements:
+- Practical experience with JavaScript and React.
+- Familiarity with Next.js, Node.js, and Express.
+- Understanding of REST APIs and relational databases.
+- Familiarity with Git and responsive design.
+- Good problem-solving and communication skills.
+- A degree in progress or relevant project experience is acceptable.
+
+Preferred:
+- TypeScript, automated testing, and cloud deployment experience.

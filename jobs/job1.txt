@@ -1,0 +1,38 @@
+Full job description
+We’re a fast-moving startup building real-time, live-streaming products, and we’re hiring A-players only. We’re building a team, not a family: everyone here owns their work, moves fast, and makes every hour count. In return, we pay competitive salaries and give you real ownership over what you build.
+
+Shift Timings (choose one)
+
+9:00 PM – 4:00 AM
+10:00 PM – 5:00 AM
+What You’ll Do
+
+Build and scale real-time features (chat, virtual gifts, live events) across mobile and web
+Own performance and stability of our React Native app in production
+Design and maintain server-side systems that hold up under real load
+Take technical ownership and help guide other developers
+Requirements
+
+Deep understanding of React Native
+Hands-on experience debugging React Native performance issues, ANRs, and memory leaks in production
+Real-time systems experience with WebSockets, Socket.io, and Redis
+Strong experience with React and Next.js
+Deep server-side understanding of Node.js
+Solid MongoDB experience
+Comfortable working in Linux environments
+Experience working with distributed systems
+Working knowledge of Nginx and reverse proxies
+Deep, practical knowledge of Claude Code in your daily workflow
+Prior leadership experience (team lead, tech lead, or mentoring)
+Must own a Mac if working remotely
+Nice to Have
+
+Experience with Agora or other live-streaming services (e.g., Twilio, 100ms, LiveKit, Mux)
+What We Offer
+
+Competitive salary for top performers
+High ownership and direct impact on the product
+A results-driven team where your work is noticed
+Evaluation PeriodAll new hires go through a 3-month evaluation period. We set clear expectations from day one, and if those standards aren’t met, we may move you off active projects or end the engagement. We’re upfront about this because we only want people who are confident they can deliver.
+
+Work Location: In person

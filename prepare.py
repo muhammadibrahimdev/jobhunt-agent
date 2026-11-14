@@ -10,9 +10,9 @@ def load_profile(path="profile.json"):
         return json.load(f)
 
 
-def prepare_application(job_text, min_score=40):
-    profile = load_profile()
-    cv_text = read_cv()
+def prepare_application(job_text, min_score=40, demo=False):
+    profile = load_profile("profile_sample.json" if demo else "profile.json")
+    cv_text = read_cv("cv_sample.txt" if demo else "cv.txt")
     out = {"errors": []}
 
     match = match_job(cv_text, job_text)

@@ -1,0 +1,23 @@
+Job Title: Backend Developer — Java and Spring Boot
+Work Location: On-site
+
+Job Summary:
+We are hiring a backend developer to build and maintain reliable services for an enterprise application.
+
+Responsibilities:
+- Develop REST APIs using Java and Spring Boot.
+- Design database schemas and optimize SQL queries.
+- Implement authentication, validation, and error handling.
+- Write unit and integration tests.
+- Review logs, troubleshoot production issues, and document services.
+- Collaborate with frontend developers and QA engineers.
+
+Requirements:
+- Java programming and object-oriented design.
+- Experience with Spring Boot and REST APIs.
+- SQL and relational database fundamentals.
+- Git, testing, and debugging skills.
+- Understanding of secure API development.
+
+Preferred:
+- Docker, CI/CD, cloud deployment, and microservices.

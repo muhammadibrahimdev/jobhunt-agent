@@ -1,0 +1,23 @@
+Job Title: Python Backend Developer (FastAPI)
+Work Location: Remote
+
+Job Summary:
+We are looking for a Python developer to implement APIs and backend services for data-driven web products.
+
+Responsibilities:
+- Build REST APIs with Python and FastAPI.
+- Validate requests and handle exceptions.
+- Connect services to PostgreSQL and manage database operations.
+- Write tests and maintain API documentation.
+- Integrate external services and background tasks.
+- Investigate bugs and improve reliability.
+
+Requirements:
+- Practical Python programming skills.
+- Understanding of HTTP, REST, JSON, and API design.
+- Familiarity with SQL databases.
+- Knowledge of Git and automated testing.
+- Ability to communicate technical issues clearly.
+
+Preferred:
+- SQLAlchemy or an ORM, Docker, asynchronous programming, and cloud platforms.

@@ -2,4 +2,5 @@
 venv
 cv.txt
 results.csv
-jobs/
+profile.json
+output/

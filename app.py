@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 from prepare import prepare_application
 from tools import search_remote_jobs, JOB_CACHE
@@ -7,6 +8,10 @@ st.title("JobHunt Agent")
 
 mode = st.sidebar.radio("Job source", ["Paste a job", "Search Remotive"])
 min_score = st.sidebar.slider("Skip jobs scoring below", 0, 80, 40)
+has_private = os.path.exists("profile.json") and os.path.exists("cv.txt")
+demo = not has_private or st.sidebar.checkbox("Demo mode (sample CV)")
+MAX_RUNS = 3
+st.session_state.setdefault("runs", 0)
 
 job_text, job_url = "", ""
 
@@ -30,9 +35,12 @@ else:
 if st.button("Prepare application", type="primary"):
     if not job_text.strip():
         st.warning("Add a job first.")
+    elif demo and st.session_state["runs"] >= MAX_RUNS:
+        st.warning("Demo limit reached. Clone the repo to run it on your own CV.")
     else:
+        st.session_state["runs"] += 1
         with st.spinner("Working, about 30 to 60 seconds..."):
-            st.session_state["result"] = prepare_application(job_text, min_score)
+            st.session_state["result"] = prepare_application(job_text, min_score, demo)
             st.session_state["url"] = job_url
 
 res = st.session_state.get("result")

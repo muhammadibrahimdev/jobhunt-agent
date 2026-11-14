@@ -1,0 +1,23 @@
+Job Title: AI Application Developer Intern
+Work Location: Remote
+
+Job Summary:
+We are looking for an intern to help build AI-powered web applications and connect language models to useful software products.
+
+Responsibilities:
+- Build application interfaces using React or Next.js.
+- Create backend endpoints using Python and FastAPI.
+- Integrate LLM APIs and implement prompt-based workflows.
+- Build document question-answering prototypes using embeddings and retrieval.
+- Test outputs, handle API errors, and document limitations.
+- Use Git and collaborate with the engineering team.
+
+Requirements:
+- Programming experience in Python or JavaScript.
+- Familiarity with APIs and basic backend development.
+- Interest in LLMs, generative AI, and AI application development.
+- Ability to debug code and learn new libraries.
+- A portfolio or academic project is helpful.
+
+Preferred:
+- FastAPI, RAG, vector databases, and TypeScript.

@@ -1,0 +1,170 @@
+Full job description
+Job Summary
+
+We are looking for a skilled Full Stack Developer who can develop, maintain, and optimize both front-end and back-end components of web applications. The ideal candidate should be comfortable working across the full development lifecycle, from designing user interfaces to managing databases and server-side logic.
+
+Key Responsibilities
+
+Design, develop, test, and maintain scalable web applications.
+
+Build responsive and user-friendly front-end interfaces.
+
+Develop and maintain server-side applications and APIs.
+
+Integrate third-party services and APIs.
+
+Optimize application performance, security, and scalability.
+
+Collaborate with UI/UX designers, QA engineers, and project managers.
+
+Troubleshoot, debug, and resolve technical issues.
+
+Participate in code reviews and maintain coding standards.
+
+Manage databases, data storage solutions, and application architecture.
+
+Stay updated with industry trends, frameworks, and emerging technologies.
+
+Requirements
+
+Bachelor's degree in Computer Science, Software Engineering, Information Technology, or a related field.
+
+Experience 3+ years of Full Stack Development experience.
+
+End Skills HTML5, CSS3, JavaScript. React.js, Next.js, Angular, or Vue.js. Responsive design and cross-browser compatibility.
+
+Back-End Skills Node.js, Express.js, Laravel, .NET, Python Django, or similar frameworks.
+
+RESTful API development and integration.
+
+Database Skills MySQL, PostgreSQL, MongoDB, or SQL Server.
+
+Database design and optimization.
+
+Additional Technical Skills
+
+Git and version control systems. Cloud platforms (AWS, Azure, Google Cloud) preferred.
+
+Understanding of CI/CD pipelines.
+
+Authentication and security best practices.
+
+Soft Skills Strong analytical and problem-solving abilities.
+
+Excellent communication skills.
+
+Ability to work independently and within a team environment.
+
+Time management and multitasking capabilities.
+
+Preferred Qualifications
+
+Experience with Docker and containerization.
+
+Knowledge of microservices architecture.
+
+Experience working in Agile/Scrum teams.
+
+Familiarity with DevOps practices.
+
+Application Instructions (MANDATORY)
+
+To be considered, you MUST complete ALL steps below.
+
+Step 1: Video Submission (2–3 minutes, no edits)
+
+Record a short video answering:
+
+Why should we hire you for this Full Stack Developer role?
+
+Tell us about a web application you built and your specific contributions.
+
+Which front-end and back-end technologies are you most comfortable with and why?
+
+Describe a technical challenge you faced and how you solved it.
+
+Step 2: Coding Assessment
+
+Build a simple Full Stack application using your preferred technology stack.
+
+Requirements:
+
+Front-End
+
+Create a responsive interface displaying a list of tasks.
+
+Allow users to:
+
+Add a task
+
+Edit a task
+
+Delete a task
+
+Mark a task as completed
+
+Back-End
+
+Create REST APIs to:
+
+Get all tasks
+
+Create a task
+
+Update a task
+
+Delete a task
+
+Database
+
+Store tasks in a database (MySQL, PostgreSQL, MongoDB, etc.).
+
+Submission Requirements:
+
+Provide:
+
+GitHub Repository Link
+
+Live Demo URL (if available)
+
+Setup Instructions
+
+Database Schema
+
+Step 3: API Integration Task
+
+Using any public API (e.g., OpenWeather, GitHub, News API):
+
+Provide:
+
+API used
+
+Short explanation of implementation
+
+Screenshot of the working integration
+
+GitHub commit showing your work
+
+Step 4: Code Review & Architecture Task
+
+Answer the following:
+
+What steps would you take to secure a web application?
+
+How would you improve the performance of a slow React application?
+
+Explain the difference between SQL and NoSQL databases and when you would use each.
+
+How would you deploy a full-stack application to AWS, Azure, or Google Cloud?
+
+Keep responses under 300 words per question.
+
+Step 5: Instruction Check
+
+Start your application with:
+
+IQT-FSD-2026
+
+Applications that do NOT follow all instructions will be automatically rejected.
+
+Work Location: Remote
