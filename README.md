@@ -1,101 +1,160 @@
-# AI Job Matcher
+# JobHunt Agent
 
-## What it does
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![Streamlit](https://img.shields.io/badge/UI-Streamlit-ff4b4b)
+![Groq](https://img.shields.io/badge/LLM-Groq-orange)
 
-AI Job Matcher compares your CV with a job description using an LLM and produces a match score out of 100, matched skills, missing skills, strengths, and a short explanation. You can analyze one job at a time or process multiple job-description text files in a batch and export the results to a CSV file. The goal is to help you assess how closely your current CV aligns with a role and identify skills or experience to improve.
+An AI agent that helps with the slowest part of job hunting: tailoring your application to every role. Paste a job description and it scores your CV match, tailors your CV, writes a cover letter, and runs a second AI agent that **fact-checks the letter against your real profile** before you see it.
 
-## How to run it
+**[Live demo](https://jobhunt-agent.streamlit.app/)** (uses a sample CV, limited to 3 runs per session)
 
-### 1. Requirements
+![Match score and skill gap](docs/dashboard-match.png)
 
-- Python 3.10 or newer
-- A Groq API key
-- Job descriptions saved as `.txt` files
+## Features
 
-### 2. Install dependencies
+- **Match scoring:** a 0 to 100 score with matched skills, missing skills, strengths, and a one-line reason.
+- **CV tailoring:** a job-specific summary, skill order, top projects, and rewritten bullets. Facts stay the same, only emphasis changes.
+- **Cover letter with a fact-check loop:** a writer agent drafts the letter, a checker agent flags unsupported claims, and a fixer agent revises it (max 2 rounds).
+- **Job sources:** paste any job description (LinkedIn, Rozee, Indeed, or email) or search remote jobs through the Remotive API.
+- **Score gate:** jobs below your cutoff skip the expensive steps to save API quota.
+- **Human in the loop:** you review everything and click apply yourself on the original job site.
 
-Create and activate a virtual environment if you want to isolate the project dependencies:
+![Tailored cover letter](docs/dashboard-cover-letter.png)
 
-```bash
-python -m venv .venv
+## How it works
+
+```mermaid
+flowchart LR
+    A[Job description] --> B[Matcher]
+    B -->|score below cutoff| X[Skip tailoring]
+    B -->|score ok| C[CV tailoring]
+    C --> D[Cover letter writer]
+    D --> E[Fact-checker]
+    E -->|unsupported claims| F[Fixer]
+    F --> E
+    E -->|passed| G[Dashboard review]
 ```
 
-Windows PowerShell:
+### Guardrails against invented claims
 
-```powershell
-.venv\Scripts\Activate.ps1
-```
+Language models tend to add skills you never had. Each layer below catches a different kind of problem, and code-level checks back up the prompts.
 
-macOS/Linux:
+| Layer | What it catches |
+|---|---|
+| Prompt rules | Instructs the model to use only facts from the profile |
+| Skill whitelist (code) | Removes any tailored skill that is not in `profile.json` |
+| Number check (code) | Flags figures that do not appear in the profile |
+| Keyword check (code) | Flags tools or technologies the profile does not mention |
+| LLM fact-checker | Flags subtler unsupported claims, such as invented responsibilities |
+
+## Tech stack
+
+- **Python 3.10+**
+- **Groq API** with `openai/gpt-oss-20b` for inference
+- **Streamlit** for the dashboard
+- **Remotive API** for remote job listings
+- **Streamlit Community Cloud** for free hosting
+
+## Getting started
+
+### 1. Install
 
 ```bash
-source .venv/bin/activate
-```
-
-Install the packages used by your project. For example, if `llm.py` uses the OpenAI-compatible Groq API and `python-dotenv`:
-
-```bash
-pip install openai python-dotenv
-```
-
-If your project has a `requirements.txt`, install from it instead:
-
-```bash
+git clone https://github.com/your-username/jobhunt-agent.git
+cd jobhunt-agent
+python -m venv venv
+venv\Scripts\activate        # Windows
+# source venv/bin/activate   # macOS/Linux
 pip install -r requirements.txt
 ```
 
-### 3. Configure `.env`
+### 2. Add your API key
 
-Create a file named `.env` in the project root:
+Get a free key at [console.groq.com](https://console.groq.com) and create a `.env` file:
 
 ```env
-GROQ_API_KEY=your_groq_api_key_here
+GROQ_API_KEY=your_key_here
 ```
 
-Load the key in your code with `python-dotenv`, and make sure `llm.py` uses the Groq API and the model `openai/gpt-oss-20b`.
-
-**Security:** Never commit `.env` or your API key to GitHub. Add `.env` to `.gitignore`.
-
-### 4. Add your CV and job descriptions
-
-Keep your CV in the file expected by `read_cv()` (for example, `cv.txt`). Save the job description you want to analyze as `job.txt`.
-
-For batch processing, put your job-description files in a `jobs/` folder, for example:
-
-```text
-jobs/
-├── job1.txt
-├── job2.txt
-└── job3.txt
-```
-
-### 5. Run a single job match
+### 3. Run in demo mode
 
 ```bash
-python day5.py job.txt
+streamlit run app.py
 ```
 
-This compares your CV with `job.txt` and prints a match report in the terminal.
+With no private files present, the app uses `cv_sample.txt` and `profile_sample.json`.
 
-### 6. Run batch matching
+### 4. Run on your own CV
 
-```bash
-python batch.py
+1. Save your CV as plain text in `cv.txt`.
+2. Build your structured profile:
+   ```bash
+   python cv_parser.py
+   ```
+3. Open `profile.json` and correct anything the model got wrong. This file is the source of truth for every fact-check.
+4. Start the app with `streamlit run app.py`.
+
+### Command-line tools
+
+| Command | What it does |
+|---|---|
+| `python match_cli.py jobs/job1.txt` | Match report for one job |
+| `python batch.py` | Score every file in `jobs/` and export `results.csv` |
+| `python tailor_cli.py jobs/job1.txt` | Tailored summary and skills |
+| `python bullets_cli.py jobs/job1.txt` | Rewritten experience bullets |
+| `python cover_cli.py jobs/job1.txt` | Cover letter without fact-checking |
+| `python review_cli.py jobs/job1.txt` | Cover letter with the fact-check loop |
+
+## Project structure
+
+```
+app.py              Streamlit dashboard
+prepare.py          prepare_application(): runs the full pipeline
+matcher.py          CV vs job scoring
+cv_parser.py        CV text to structured profile.json
+tailor.py           Summary, skills, and top projects
+bullets.py          Bullet rewriting with number guard
+cover_letter.py     Cover letter writer
+fact_checker.py     Code and LLM fact-checks
+safe_letter.py      Write, check, fix loop
+llm.py              Shared LLM helpers with retry logic
+tools.py            Job search and tool-calling experiments
+agent_v1.py         Early tool-calling agent (being replaced by LangGraph)
+cv_sample.txt       Sample CV for demo mode
+profile_sample.json Sample profile for demo mode
 ```
 
-This processes the `.txt` files in `jobs/` and exports the results to `results.csv`. Make sure your batch script uses the same folder and CSV filename.
+## Privacy
 
-## Tech used
+`cv.txt`, `profile.json`, `jobs/`, `output/`, and `.env` are listed in `.gitignore` and never leave your machine. The public demo runs only on the sample CV.
 
-- **Python** — application logic and file processing
-- **Groq API** — LLM inference
-- **`openai/gpt-oss-20b`** — model used to evaluate CV-to-job alignment
-- **CSV** — export batch matching results
+## Limitations
+
+- The fact-checker reduces invented claims but cannot guarantee zero. Always read the output before sending.
+- The tool does not auto-apply. This is deliberate, since LinkedIn and similar sites restrict automation.
+- Free API tiers are rate-limited, so heavy use may slow down or pause.
+- Remotive lists remote jobs worldwide and is a small board. Job alert emails and pasted descriptions cover other sources.
 
 ## Roadmap
 
-- [ ] Generate tailored CVs for individual job descriptions
-- [ ] Generate role-specific cover letters
-- [ ] Collect job listings from Gmail with user authorization
-- [ ] Add LangGraph agents to coordinate multi-step job-search workflows
-- [ ] Build a dashboard to review scores, matched skills, and missing skills
+- [x] CV-to-job match scoring
+- [x] Structured profile and CV tailoring
+- [x] Cover letters with a fact-check loop
+- [x] Streamlit dashboard with demo mode
+- [x] Public deployment
+- [ ] Gmail job-alert intake (LinkedIn, Rozee, Indeed)
+- [ ] LangGraph multi-agent workflow
+- [ ] Job tracker (applied, interview, rejected)
+- [ ] Formatted PDF and Word export of the tailored CV
+- [ ] One-click email applications
+
+## What I learned
+
+- Put guardrails in code, not only in prompts.
+- Let the model make decisions and let code do the looping.
+- Put retry logic in one shared helper so every agent benefits.
+- When an agent misbehaves, print what its tools return before changing the prompt.
+
+## Author
+
+**Your Name** · [LinkedIn](https://linkedin.com/in/your-profile) · [GitHub](https://github.com/your-username)
